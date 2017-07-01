@@ -39,7 +39,7 @@ cd /home/xilinx
 git clone https://github.com/BVLC/caffe.git`
 ```
 
-Copy the Makefile.config (which is provided by our project) to caffe root directory
+Copy the PYNQ version of Makefile.config (provided under PYNQ-Classification/CAFFE_ON_PYNQ) to caffe root directory
 
 ```
 make all
@@ -63,8 +63,9 @@ cd .
 
 - Export PYTHONPATH
 
+Add the following line at the end of ".bashrc" file
+
 ```
-vim .bashrc
 export PYTHONPATH=/home/xilinx/caffe/python
 ```
 
@@ -75,10 +76,21 @@ pip install -r https://raw.githubusercontent.com/Lasagne/Lasagne/v0.1/requiremen
 pip install Lasagne==0.1
 ```
 
-## 3. Run Demo on PYNQ
+## 3. Run CNN Demos on PYNQ
 
 ```
 cd /home/xilinx/jupyter_notebooks
 git clone https://github.com/awai54st/PYNQ-Classification.git
+```
 
+The following two demos show the implementions of LeNet and CIFAR-10 on PYNQ:
+
+```
+/home/xilinx/jupyter_notebooks/PYNQ-Classification/PYNQ_SIDE/Theano/Lenet/Using a Caffe Pretrained Network - LeNet5.ipynb
+/home/xilinx/jupyter_notebooks/PYNQ-Classification/PYNQ_SIDE/Theano/CIFAR_10/Using a Caffe Pretrained Network - CIFAR10.ipynb
+```
+
+## 4. Vivado Project Setup - How to implement more CNN models?
+
+The VIVADO_SIDE.7z package contains the Vivado project needed to generate bitstreams for customised CNN models. It contains the "layer IP library", "base project" and "block design project" as mentioned in the tutorial video. 
 
