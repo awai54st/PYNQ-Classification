@@ -1,5 +1,5 @@
 # PYNQ-Classification
-Python on Zynq FPGA for Convolutional Neural Networks (Beta)
+Python on Zynq FPGA for Convolutional Neural Networks (Alpha)
 
 This repository presents a fast prototyping framework, which is an Open Source framework designed to enable fast deployment of embedded Convolutional Neural Network (CNN) applications on PYNQ platforms.
 
@@ -7,28 +7,17 @@ For details on the project please watch my video at:
 
 https://youtu.be/DoA8hKBltV4
 
-# 1. Install Caffe
+## 1. Install Caffe
 
 - Install dependencies
 
-sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
+`sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
 sudo apt-get install --no-install-recommends libboost-all-dev
-sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
+sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev`
 
 - Install Protobuf 3
 
-# Make sure you grab the latest version
-curl -OL https://github.com/google/protobuf/releases/download/v3.2.0/protoc-3.2.0-linux-x86_64.zip
-
-# Unzip
-unzip protoc-3.2.0-linux-x86_64.zip -d protoc3
-
-# Move only protoc* to /usr/bin/
-sudo mv protoc3/bin/protoc /usr/bin/protoc
-
-OR
-
-pip3.4 install protobuf
+`pip3.4 install protobuf`
 
 - Add SWAP USB
 
