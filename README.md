@@ -94,3 +94,21 @@ The following two demos show the implementions of LeNet and CIFAR-10 on PYNQ:
 
 The VIVADO_SIDE.7z package contains the Vivado project needed to generate bitstreams for customised CNN models. It contains the "layer IP library", "base project" and "block design project" as mentioned in the tutorial video. 
 
+## References
+
+### 1. Caffe
+
+Caffe is released under the [BSD 2-Clause license](https://github.com/BVLC/caffe/blob/master/LICENSE).
+The BAIR/BVLC reference models are released for unrestricted use.
+
+Please cite Caffe in your publications if it helps your research:
+
+    @article{jia2014caffe,
+      Author = {Jia, Yangqing and Shelhamer, Evan and Donahue, Jeff and Karayev, Sergey and Long, Jonathan and Girshick, Ross and Guadarrama, Sergio and Darrell, Trevor},
+      Journal = {arXiv preprint arXiv:1408.5093},
+      Title = {Caffe: Convolutional Architecture for Fast Feature Embedding},
+      Year = {2014}
+    }
+    
+### 2. Theano
+
