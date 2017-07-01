@@ -137,7 +137,7 @@ from pynq import Overlay
 Overlay('base.bit').download()
 from pynq.drivers import DMA
 import pynq.drivers.dma
-Overlay('/home/xilinx/jupyter_notebooks/PYNQ_CNN/Theano/CIFAR_10/Bitstream/decorator_cifar10_16b.bit').download()
+Overlay('/home/xilinx/jupyter_notebooks/PYNQ_Classification/PYNQ_SIDE/Theano/CIFAR_10/Bitstream/decorator_cifar10_16b.bit').download()
 
 def prepare_execution(plan,dma,return_port):
   if type(plan) is Wrapper:
