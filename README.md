@@ -25,6 +25,8 @@ sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
 
 - Add SWAP USB
 
+Since PYNQ has limited RAM, in order to install Caffe extra memory will be required in the form of swap memory. In my test, a USB with size 2GB is large enough.
+
 ```
 mkswap /dev/sda
 swapon /dev/sda
@@ -72,5 +74,11 @@ export PYTHONPATH=/home/xilinx/caffe/python
 pip install -r https://raw.githubusercontent.com/Lasagne/Lasagne/v0.1/requirements.txt
 pip install Lasagne==0.1
 ```
+
+## 3. Run Demo on PYNQ
+
+```
+cd /home/xilinx/jupyter_notebooks
+git clone https://github.com/awai54st/PYNQ-Classification.git
 
 
