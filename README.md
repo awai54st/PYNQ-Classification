@@ -1,35 +1,35 @@
-# PROJECT NAME: 
+## PROJECT NAME: 
 PYNQ Classification - Python on Zynq FPGA for Convolutional Neural Networks (Alpha)
 
-# DATE:
+## DATE:
 28/06/2017
 
-# VERSION:
+## VERSION:
 Alpha Release
 
-# UNIVERSITY:
+## UNIVERSITY:
 Imperial College London
 
-# SUPERVISOR:
+## SUPERVISOR:
 Prof. P. Y. K. Cheung
 p.cheung@imperial.ac.uk
 
-# PARTICIPANT
+## PARTICIPANT
 Erwei Wang
 ew913@ic.ac.uk
 
-# BOARD USED:
+## BOARD USED:
 PYNQ-Z1
 
-# VIVADO VERSION:
+## VIVADO VERSION:
 2016.01
 
-# BRIEF DESCRIPTION:
+## BRIEF DESCRIPTION:
 This repository presents a fast prototyping framework, which is an Open Source framework designed to enable fast deployment of embedded Convolutional Neural Network (CNN) applications on PYNQ platforms. This is an open source framework, and the alpha release is publically available via GITHUB (https://github.com/awai54st/PYNQ-Classification.git).
 
-# INSTRUCTIONS TO BUILD AND TEST THE PROJECT:
+## INSTRUCTIONS TO BUILD AND TEST THE PROJECT:
 
-## Repository Organisation
+### Repository Organisation
 
 The project demo accepts pre-trained CNN models in either Caffe or Theano syntax, hence the step 1 and 2 introduces how to install Caffe and Theano (with Lasagne) on PYNQ. Step 3 explains how to download and run the demos for LeNet and CIFAR-10 (Caffe "quick" version) models.
 
@@ -37,7 +37,7 @@ For a quick overview on the project please watch my video tutorial at:
 
 https://youtu.be/DoA8hKBltV4
 
-## 1. Install Caffe on PYNQ
+### 1. Install Caffe on PYNQ
 
 - Install dependencies
 
@@ -97,14 +97,14 @@ Add the following line at the end of ".bashrc" file
 export PYTHONPATH=/home/xilinx/caffe/python
 ```
 
-## 2. Install Theano with Lasagne on PYNQ
+### 2. Install Theano with Lasagne on PYNQ
 
 ```
 pip install -r https://raw.githubusercontent.com/Lasagne/Lasagne/v0.1/requirements.txt
 pip install Lasagne==0.1
 ```
 
-## 3. Run CNN Demos on PYNQ
+### 3. Run CNN Demos on PYNQ
 
 ```
 cd /home/xilinx/jupyter_notebooks
@@ -118,11 +118,11 @@ The following two demos show the implementions of LeNet and CIFAR-10 on PYNQ:
 /home/xilinx/jupyter_notebooks/PYNQ-Classification/PYNQ_SIDE/Theano/CIFAR_10/Using a Caffe Pretrained Network - CIFAR10.ipynb
 ```
 
-## 4. Vivado Project Setup - How to implement more CNN models?
+### 4. Vivado Project Setup - How to implement more CNN models?
 
 The VIVADO_SIDE.7z package contains the Vivado project needed to generate bitstreams for customised CNN models. It contains the "layer IP library", "base project" and "block design project" as mentioned in the tutorial video. 
 
-## References
+### References
     
 ### 1. BNN-PYNQ
 
