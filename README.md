@@ -1,7 +1,33 @@
-# PYNQ-Classification
-Python on Zynq FPGA for Convolutional Neural Networks (Alpha)
+# PROJECT NAME: 
+PYNQ Classification - Python on Zynq FPGA for Convolutional Neural Networks (Alpha)
 
-This repository presents a fast prototyping framework, which is an Open Source framework designed to enable fast deployment of embedded Convolutional Neural Network (CNN) applications on PYNQ platforms.
+# DATE:
+28/06/2017
+
+# VERSION:
+Alpha Release
+
+# UNIVERSITY:
+Imperial College London
+
+# SUPERVISOR:
+Prof. P. Y. K. Cheung
+p.cheung@imperial.ac.uk
+
+# PARTICIPANT
+Erwei Wang
+ew913@ic.ac.uk
+
+# BOARD USED:
+PYNQ-Z1
+
+# VIVADO VERSION:
+2016.01
+
+# BRIEF DESCRIPTION:
+This repository presents a fast prototyping framework, which is an Open Source framework designed to enable fast deployment of embedded Convolutional Neural Network (CNN) applications on PYNQ platforms. This is an open source framework, and the alpha release is publically available via GITHUB (https://github.com/awai54st/PYNQ-Classification.git).
+
+# INSTRUCTIONS TO BUILD AND TEST THE PROJECT:
 
 ## Repository Organisation
 
