@@ -1,31 +1,8 @@
 ## PROJECT NAME: 
-PYNQ Classification - Python on Zynq FPGA for Convolutional Neural Networks (Alpha)
-
-## DATE:
-28/06/2017
-
-## VERSION:
-Alpha Release
-
-## UNIVERSITY:
-Imperial College London
-
-## SUPERVISOR:
-Prof. P. Y. K. Cheung
-p.cheung@imperial.ac.uk
-
-## PARTICIPANT
-Erwei Wang
-ew913@ic.ac.uk
-
-## BOARD USED:
-PYNQ-Z1
-
-## VIVADO VERSION:
-2016.01
+PYNQ Classification - Python on Zynq FPGA for Convolutional Neural Networks (Alpha Release)
 
 ## BRIEF DESCRIPTION:
-This repository presents a fast prototyping framework, which is an Open Source framework designed to enable fast deployment of embedded Convolutional Neural Network (CNN) applications on PYNQ platforms. This is an open source framework, and the alpha release is publically available on GITHUB (https://github.com/awai54st/PYNQ-Classification.git).
+This repository presents a fast prototyping framework, which is an Open Source framework designed to enable fast deployment of embedded Convolutional Neural Network (CNN) applications on PYNQ platforms.
 
 ## INSTRUCTIONS TO BUILD AND TEST THE PROJECT:
 
@@ -33,17 +10,15 @@ This repository presents a fast prototyping framework, which is an Open Source f
 
 The project demo accepts pre-trained CNN models in either Caffe or Theano syntax, hence the step 1 and 2 introduces how to install Caffe and Theano (with Lasagne) on PYNQ. Step 3 explains how to download and run the demos for LeNet and CIFAR-10 (Caffe "quick" version) models.
 
-For a quick overview on the project please watch my video tutorial at: 
-
-https://youtu.be/DoA8hKBltV4
+For a quick overview on the project please watch [my video tutorial](https://youtu.be/DoA8hKBltV4).
 
 ### 1. PYNQ SD Card Image
 
 We have prepared a SD card image with pre-installed Caffe and Theano dependencies. A SD card with at least 16GB is needed. The static IP for the PYNQ Jupyter Notebook is 192.168.2.99
 
-Download Link (on Baidu Drive): https://pan.baidu.com/s/1c2EmMvY
+[Download Link (on Baidu Drive)](https://pan.baidu.com/s/1c2EmMvY)
 
-If you wish to setup Caffe and Theano dependencies on your own, please see MANUAL_INSTAL.md for instructions. (NOT RECOMMENDED since multiple issues have been reported)
+If you wish to setup Caffe and Theano dependencies on your own, please see [MANUAL_INSTAL.md](MANUAL_INSTALL.md) for instructions. (NOT RECOMMENDED since multiple issues have been reported)
 
 ### 2. Vivado Project Setup - How to implement more CNN models?
 
