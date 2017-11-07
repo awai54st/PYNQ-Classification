@@ -28,7 +28,7 @@ cd /home/xilinx
 git clone https://github.com/BVLC/caffe.git`
 ```
 
-Copy the PYNQ version of Makefile.config (provided under PYNQ-Classification/CAFFE_ON_PYNQ) to caffe root directory
+Copy the PYNQ version of Makefile.config (provided under PYNQ-Classification/tools/CAFFE_ON_PYNQ) to caffe root directory
 
 ```
 make all
