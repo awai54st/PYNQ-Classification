@@ -3,7 +3,7 @@
 ## Please DO NOT edit it.
 ## Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 ############################################################
-open_project CIFAR_10
+open_project -reset CIFAR_10
 set_top cifar_10
 add_files ../hw_library/stream_convolution_slideWindow.h
 add_files ../hw_library/pool.h
@@ -12,7 +12,7 @@ add_files ../hw_library/fixed_point_stream_convolution.h
 add_files ../hw_library/config.h
 add_files CIFAR_10_wrapper.h
 add_files CIFAR_10_wrapper.cpp
-open_solution "solution1"
+open_solution -reset "solution1"
 set_part {xc7z020clg484-1} -tool vivado
 create_clock -period 10 -name default
 #source "./CIFAR_10/solution1/directives.tcl"
