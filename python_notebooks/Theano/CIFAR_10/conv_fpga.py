@@ -55,9 +55,8 @@ class FunctionMetadata:
     self.DMA=[([0],[0]),([5],[4])]
     self.DMA_names=['axi_dma_0','axi_dma_1']
     self.functions={}
-    self.functions['xilinx.com:user:design_2:1.0'] = Function(in_ports=[2],out_ports=[2],name=None)
+    self.functions['xilinx.com:hls:cifar_10:1.0'] = Function(in_ports=[2],out_ports=[2],name=None)
     self.functions['Xilinx:hls:stream_mult:1.0'] = Function(in_ports=[3,4],out_ports=[3],name=None)
-    #self.functions['xilinx.com:hls:wrapped_conv_im2col_hw:1.0']=Function(in_ports=[3,4],out_ports=[3],name=None)
     self.functions['Xilinx:hls:simple_sum:1.0']=Function(in_ports=[1],out_ports=[1],name=None)
     self.functions['Xilinx:hls:mult_constant:1.0']=Function(in_ports=[6],out_ports=[5],name='mult_constant_0')
     
@@ -137,7 +136,7 @@ from pynq import Overlay
 Overlay('base.bit').download()
 from pynq.drivers import DMA
 import pynq.drivers.dma
-Overlay('/home/xilinx/jupyter_notebooks/PYNQ_Classification/PYNQ_SIDE/Theano/CIFAR_10/Bitstream/decorator_cifar10_16b.bit').download()
+Overlay('/home/xilinx/jupyter_notebooks/PYNQ_CNN/Theano/CIFAR_10/Bitstream/cifar_10.bit').download()
 
 def prepare_execution(plan,dma,return_port):
   if type(plan) is Wrapper:
@@ -192,7 +191,7 @@ def total(vs:[np.int32]) -> [np.int32]:
   print("In total")
   return sum(vs)
 
-@hardware_function('xilinx.com:user:design_2:1.0')
+@hardware_function('xilinx.com:hls:cifar_10:1.0')
 def double(vs:[np.int32]) -> [np.int32]:
   print("In double")
   return [v*2 for v in vs]
@@ -290,35 +289,25 @@ def FPGAWeightLoader(W, index, IFMDim, OFMDim, PadDim, flip_filters=True):
 def FPGAQuickTest(test_data, batch_size, OFMDim, OFMCH):
     input_mat_tmp = test_data[0:batch_size]
     input_val = input_mat_tmp.transpose(0,2,3,1).ravel()
-    #input_val = input_val * 18#42
-    input_val = np.append([0, batch_size, 5, 1, 28, 10, 1, 2], input_val)
+    input_val = np.append([0, batch_size, 5, 3, 32, 10, 1, 2], input_val)
     input_val = input_val.astype(int)
     output_fpga = double(input_val).hw_value()
-    #output_mat_tmp = output_fpga[8:].reshape(batch_size, OFMDim*OFMDim, OFMCH)
-    #output_mat_tmp = output_mat_tmp.transpose(0, 2, 1)
-    #output_mat_tmp = output_mat_tmp.reshape(batch_size, OFMCH, OFMDim, OFMDim)
     output_mat_tmp = output_fpga[8:].reshape(batch_size, -1)
-    #output_mat_tmp = output_mat_tmp / 18#5
     
     return output_mat_tmp
 
 class FPGA_LENET(lasagne.layers.Layer):
-#    def __init__(self, incoming, OFMDim, OFMCH, **kwargs):
-#        super(FPGA_LENET, self).__init__(incoming, **kwargs)
-#
-#        self.OFMDim = OFMDim
-#        self.OFMCH = OFMCH
         
     def get_output_for(self, input, **kwargs):
         input_mat = input.eval()
         batch_size = input_mat.shape[0]
         input_val = input_mat.transpose(0,2,3,1).ravel()
-        input_val = input_val * 18#42
+        input_val = input_val * 18
         input_val = np.append([0, batch_size, 5, 1, 28, 10, 1, 2], input_val)
         input_val = input_val.astype(int)
         output_fpga = double(input_val).hw_value()
         output_mat_tmp = output_fpga[8:].reshape(batch_size, -1)
-        output_mat_tmp = output_mat_tmp / 18#5
+        output_mat_tmp = output_mat_tmp / 18
         return output_mat_tmp
 
 class FPGA_CIFAR10(lasagne.layers.Layer):
@@ -326,12 +315,10 @@ class FPGA_CIFAR10(lasagne.layers.Layer):
         input_mat = input.eval()
         batch_size = input_mat.shape[0]
         input_val = input_mat.transpose(0,2,3,1).ravel()
-        #input_val = input_val * 18#42
-        input_val = np.append([0, batch_size, 5, 1, 28, 10, 1, 2], input_val)
+        input_val = np.append([0, batch_size, 5, 3, 32, 10, 1, 2], input_val)
         input_val = input_val.astype(int)
         output_fpga = double(input_val).hw_value()
         output_mat_tmp = output_fpga[8:].reshape(batch_size, -1)
-        #output_mat_tmp = output_mat_tmp / 18#5
         return output_mat_tmp
     
 class FPGAConv2DLayer(lasagne.layers.Layer):
@@ -504,90 +491,28 @@ class FPGAConv2DLayer(lasagne.layers.Layer):
         # called directly with a different shape than self.input_shape.
         if input_shape is None:
             input_shape = self.input_shape
-
-        #print("Input Shape",input_shape)
-        #print("Filter Shape",self.get_W_shape())
-        
-        ############################################################
         
         if self.stride == (1, 1) and self.pad == 'same':
             # simulate same convolution by cropping a full convolution
-#            conved = self.convolution(input, self.W, subsample=self.stride,
-#                                      image_shape=input_shape,
-#                                      filter_shape=self.get_W_shape(),
-#                                      border_mode='full')
             shift_x = (self.filter_size[0] - 1) // 2
             shift_y = (self.filter_size[1] - 1) // 2
-#            conved = conved[:, :, shift_x:input.shape[2] + shift_x,
-#                            shift_y:input.shape[3] + shift_y]
         else:
             # no padding needed, or explicit padding of input needed
             if self.pad == 'full':
-#                border_mode = 'full'
                 pad = [(0, 0), (0, 0)]
             elif self.pad == 'same':
-#                border_mode = 'valid'
                 pad = [(self.filter_size[0] // 2,
                         (self.filter_size[0] - 1) // 2),
                        (self.filter_size[1] // 2,
                         (self.filter_size[1] - 1) // 2)]
             else:
-#                border_mode = 'valid'
                 pad = [(self.pad[0], self.pad[0]), (self.pad[1], self.pad[1])]
-#            if pad != [(0, 0), (0, 0)]:
-#                input = padding.pad(input, pad, batch_ndim=2)
-#                input_shape = (input_shape[0], input_shape[1],
-#                               None if input_shape[2] is None else
-#                               input_shape[2] + pad[0][0] + pad[0][1],
-#                               None if input_shape[3] is None else
-#                               input_shape[3] + pad[1][0] + pad[1][1])
-#            conved = self.convolution(input, self.W, subsample=self.stride,
-#                                      image_shape=input_shape,
-#                                      filter_shape=self.get_W_shape(),
-#                                      border_mode=border_mode)
-
-        #batch_size=np.shape(input.eval())[0]
-        #bottom_mat = im2col_lasagne_cython.im2col_lasagne_cython(input.eval(),self.filter_size[0],self.filter_size[1],pad[0][0],self.stride[0])
-        #bottom_mat = np.transpose(bottom_mat)
-        #bottom_stream = bottom_mat.ravel()
-        #bottom_stream = np.append((bottom_mat.shape[0],bottom_mat.shape[1]),bottom_stream)
-        #weight_mat=self.W.eval()
-        #weight_stream=np.append((self.num_filters,bottom_mat.shape[1]),weight_mat.ravel())
-        #result_stream=mult(bottom_stream,weight_stream).hw_value()
-
-        #result = np.reshape(result_stream, (-1, self.num_filters))
-        #result = result.transpose(1,0)
-        #result = result.ravel()
-        #conved=np.reshape(result,(batch_size,self.num_filters,self.output_shape[2],self.output_shape[3]))
-        
-        
-        
-#        if input_mat.ndim == 3:
-#            batch_size = 1
-#            KerDim = self.filter_size[0]
-#            print('KerDim', KerDim)
-#            IFMCH = input_mat.shape[0]
-#            print('IFMCH', IFMCH)
-#            IFMDim = input_mat.shape[1]
-#            print('IFMDim', IFMDim)
-#            OFMCH = self.num_filters
-#            print('OFMCH', OFMCH)
-#            OFMDim = self.output_shape[2]
-#            print('OFMDim', OFMDim)
-#            PadDim = pad[0][0]
-#            print('PadDim', PadDim)
-#            
-#            input_val = input_mat.transpose(1,2,0).ravel()
-#            input_val = input_val * 64
-#            input_val = np.append([0, batch_size, KerDim, IFMCH, IFMDim, OFMCH, OFMDim, PadDim], input_val)
-#            input_val = input_val.astype(int)
 
         input_mat = input.eval()
         if input_mat.ndim == 3:
             input_mat = input_mat.reshape(1, input_mat.shape)
         print('input_mat shape', input_mat.shape)
             
-        #elif input_mat.ndim == 4:
         batch_size = input_mat.shape[0]
         KerDim = self.filter_size[0]
         print('KerDim', KerDim)
@@ -601,11 +526,6 @@ class FPGAConv2DLayer(lasagne.layers.Layer):
         print('OFMDim', OFMDim)
         PadDim = pad[0][0]
         print('PadDim', PadDim)
-        
-        ## Write Weights ##
-        #weight = self.W.eval()
-        #FPGAWeightLoader(weight, IFMDim, OFMDim, PadDim)
-        ##
           
         batch_size_sub = 40
         inx_processed = 0
@@ -642,28 +562,6 @@ class FPGAConv2DLayer(lasagne.layers.Layer):
                 conved = output_mat_tmp
             else:
                 conved = np.append(conved, output_mat_tmp, axis=0)
-            
-        #input_val = input_mat.transpose(0,2,3,1).ravel()
-        ##print('inmax',np.amax(input_val))
-        ##print('inmin',np.amin(input_val))
-        #input_val = input_val * 6
-        #input_val = np.append([0, batch_size, KerDim, IFMCH, IFMDim, OFMCH, OFMDim, PadDim], input_val)
-        #input_val = input_val.astype(int)
-        ##print(input_val)
-               
-        #output_fpga = double(input_val).hw_value()
-        ##print('output_fpga shape', output_fpga.shape)
-        #conved = output_fpga[8:].reshape(batch_size, OFMDim*OFMDim, OFMCH)
-        #conved = conved.transpose(0, 2, 1)
-        #conved = conved.reshape(batch_size, OFMCH, OFMDim, OFMDim)
-        #conved = conved / 768
-        
-        
-        
-
-        #################################################################
-        
-        #print("Output Shape",T.shape(conved.eval()))
             
         if self.b is None:
             activation = conved
@@ -746,11 +644,6 @@ class Conv2DLayer(lasagne.layers.Layer):
         # called directly with a different shape than self.input_shape.
         if input_shape is None:
             input_shape = self.input_shape
-
-        #print("Input Shape",input_shape)
-        #print("Filter Shape",self.get_W_shape())
-        
-        ############################################################
         
         if self.stride == (1, 1) and self.pad == 'same':
             # simulate same convolution by cropping a full convolution
@@ -783,41 +676,10 @@ class Conv2DLayer(lasagne.layers.Layer):
                                input_shape[2] + pad[0][0] + pad[0][1],
                                None if input_shape[3] is None else
                                input_shape[3] + pad[1][0] + pad[1][1])
-#            #####
-#            input = input.eval()
-#            #input_max = np.amax(input)
-#            #input_min = np.amin(input)
-#            input = input*6 #32768
-#            #input = (input - input_min)*4
-#            #print('max input', np.amax(input))
-#            #print('min input', np.amin(input))
-#            input = input.astype(int)
-#            input = input.astype(float)
-#                
-#            weight_tmp = self.W.eval()
-#            #weight_max = np.amax(self.W)
-#            #weight_min = np.amin(self.W)
-#            weight_tmp = weight_tmp * 128 #65536
-#            #self.W = (self.W - weight_min)*4
-#            #print('max weight', np.amax(self.W))
-#            #print('min weight', np.amin(self.W))
-#            weight_tmp = weight_tmp.astype(int)
-#            weight_tmp = weight_tmp.astype(float)
-#            #####
             conved = self.convolution(input, self.W, subsample=self.stride,
                                       image_shape=input_shape,
                                       filter_shape=self.get_W_shape(),
                                       border_mode=border_mode)
-#            #####
-#            conved = conved.eval()
-#            #conved_max = np.amax(conved)
-#            #conved_min = np.amin(conved)
-#            conved = conved / 768 #2147483648
-#            #conved = (conved - (conved_max+conved_min)/2)/16
-#            #print('max output', np.amax(conved))
-#            #print('min output', np.amin(conved))
-#            #conved = conved.astype(int)
-#            #####
             
         if self.b is None:
             activation = conved
@@ -828,4 +690,5 @@ class Conv2DLayer(lasagne.layers.Layer):
         activation = conved
 
         return self.nonlinearity(activation)
+
 
