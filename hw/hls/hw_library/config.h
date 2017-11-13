@@ -2,13 +2,14 @@
 #include <ap_axi_sdata.h>
 
 #define bitwidth 32
-#define InpWidth 16
-#define quant_scale 32768// 2^(wordwidth-1)
+#define InpWidth 8
+#define quant_scale 128// 2^(wordwidth-1)
 
 #define INF 999999
 
 #ifndef AXI_VAL_DEF
-struct AXI_VAL{
+typedef ap_int<bitwidth> AXI_VAL;
+struct AXI_DMA_IO{
 	ap_int<bitwidth> data;
 	bool last;
 };

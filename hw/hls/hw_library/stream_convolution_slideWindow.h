@@ -42,7 +42,7 @@
  *
  *****************************************************************************/
 
-#define inElem_MAX 4000
+#define inElem_MAX 5760
 #include "config.h"
 
 
@@ -61,74 +61,42 @@ template<
 void SCIG(
 	hls::stream<AXI_VAL> & in, 
 	hls::stream<AXI_VAL> & out
-//	const unsigned KerDim_curr,
-//	const unsigned IFMCH_curr,
-//	const unsigned IFMDim_curr,
-//	const unsigned OFMCH_curr,
-//	const unsigned OFMDim_curr,
-//	const ap_uint<bitwidth> padValue = 0
 ) {
-
-#pragma HLS INTERFACE axis port=in
-#pragma HLS INTERFACE axis port=out
-#pragma HLS INTERFACE ap_ctrl_none port=return
 
 	AXI_VAL valIn, valOut;
 
 	// first two data as row_size and col_size
 	valIn = in.read();
-	unsigned status = (unsigned)valIn.data;
+	unsigned status = (unsigned)valIn;
 	out.write(valIn);
 
 	valIn = in.read();
-	unsigned batch_size = (unsigned)valIn.data;
+	unsigned batch_size = (unsigned)valIn;
 	out.write(valIn);
 
 	valIn = in.read();
-	unsigned ConvKernelDim = (unsigned)valIn.data;
+	unsigned ConvKernelDim = (unsigned)valIn;
 	out.write(valIn);
 
 	valIn = in.read();
-	unsigned IFMChannels = (unsigned)valIn.data;
+	unsigned IFMChannels = (unsigned)valIn;
 	out.write(valIn);
 
 	valIn = in.read();
-	unsigned IFMDim = (unsigned)valIn.data;
+	unsigned IFMDim = (unsigned)valIn;
 	out.write(valIn);
 
 	valIn = in.read();
-	unsigned OFMChannels = (unsigned)valIn.data;
+	unsigned OFMChannels = (unsigned)valIn;
 	out.write(valIn);
 
 	valIn = in.read();
-	unsigned OFMDim = (unsigned)valIn.data;
+	unsigned OFMDim = (unsigned)valIn;
 	out.write(valIn);
 
 	valIn = in.read();
-	unsigned PadDim = (unsigned)valIn.data;
+	unsigned PadDim = (unsigned)valIn;
 	out.write(valIn);
-
-	// Registers to store parameters for the current layer
-//	const unsigned KerDim_curr = 5;
-//	const unsigned IFMCH_curr = 1;
-//	const unsigned IFMDim_curr = 32;
-//	const unsigned OFMCH_curr = 4;
-//	const unsigned OFMDim_curr = 28;
-//	const unsigned PadDim_curr = 0;
-//	static unsigned KerDim_curr = 0;
-//	static unsigned IFMCH_curr = 0;
-//	static unsigned IFMDim_curr = 0;
-//	static unsigned OFMCH_curr = 0;
-//	static unsigned OFMDim_curr = 0;
-//	static unsigned PadDim_curr = 0;
-//	if (status == 1) {
-//		KerDim_curr = ConvKernelDim;
-//		IFMCH_curr = IFMChannels;
-//		IFMDim_curr = IFMDim;
-//		OFMCH_curr = OFMChannels;
-//		OFMDim_curr = OFMDim;
-//		PadDim_curr = PadDim;
-//	}
 
 	if (status == 0){
 
@@ -151,34 +119,26 @@ void SCIG(
 		int inp_i = -padValue, inp_j = -padValue;
 
 
-		//for (unsigned int num_imag = 0; num_imag < batch_size; num_imag++) {
 		unsigned int baseIterBound = baseIter*batch_size;
 #pragma HLS RESOURCE variable=baseIterBound core=Mul_LUT
 		for (unsigned int i = 0; i < baseIter*batch_size; i++) {
-//#pragma HLS LOOP_TRIPCOUNT min=1 max=1 avg=1
 #pragma HLS PIPELINE II=1
 #pragma HLS DEPENDENCE variable=inputBuf inter false
 			if (inp < IFMPadDimSqrt) {
 				ap_uint<InpWidth> inElem [256];
 #pragma HLS RESOURCE variable=inElem core=RAM_S2P_LUTRAM
 				if ((inp_i < 0) || (inp_j < 0) || (inp_i >= IFMDim_curr) || (inp_j >= IFMDim_curr)) {
-					//				inElem = padValue;
 					for(unsigned int inp_ch=0; inp_ch<IFMCH_curr; inp_ch++){
-//#pragma HLS PIPELINE II=1
 						inElem[inp_ch] = padValue;
 					}
 				}
 				else {
-					//				inElem = in.read();
 					for(unsigned int inp_ch=0; inp_ch<IFMCH_curr; inp_ch++){
-//#pragma HLS PIPELINE II=1
 						AXI_VAL inElem_tmp = in.read();
-						inElem[inp_ch] = inElem_tmp.data;
+						inElem[inp_ch] = inElem_tmp;
 					}
 				}
-				//			inputBuf[inp] = inElem;
 				for(unsigned int inp_ch=0; inp_ch<IFMCH_curr; inp_ch++){
-//#pragma HLS PIPELINE II=1
 					inputBuf[inp*IFMCH_curr+inp_ch] = inElem[inp_ch];
 				}
 				inp++;
@@ -195,12 +155,9 @@ void SCIG(
 			{
 				unsigned int input_base = oy * IFMPadDim + ox;
 				unsigned int input_ind = input_base + ky * IFMPadDim + kx;
-				//			ap_uint<InpWidth> inElem = inputBuf[input_ind];
-				//			out.write(inElem);
 				AXI_VAL inElem;
 				for(unsigned int inp_ch=0; inp_ch<IFMCH_curr; inp_ch++){
-//#pragma HLS PIPELINE II=1
-					inElem.data = inputBuf[input_ind*IFMCH_curr+inp_ch];
+					inElem = inputBuf[input_ind*IFMCH_curr+inp_ch];
 					out.write(inElem);
 				}
 				kx++;
@@ -222,20 +179,7 @@ void SCIG(
 				}
 			}
 		}
-		//}
 	}
-//	else if (status == 1) {
-//		KerDim_curr = ConvKernelDim;
-//		IFMCH_curr = IFMChannels;
-//		IFMDim_curr = IFMDim;
-//		OFMCH_curr = OFMChannels;
-//		OFMDim_curr = OFMDim;
-//		PadDim_curr = PadDim;
-//		for(unsigned int i = 0; i < OFMChannels*ConvKernelDim*ConvKernelDim*IFMChannels; i++){
-//			valIn = in.read();
-//			out.write(valIn);
-//		}
-//	}
 	else{
 		unsigned int KER_size_0 = OFMChannels*ConvKernelDim;
 		unsigned int KER_size_1 = KER_size_0*ConvKernelDim;

@@ -44,17 +44,6 @@
 
 #include "config.h"
 
-///////////////////////////////////////
-// Parameters//
-//#define layer_id 1
-//#define pool_size 2
-//#define pool_square pool_size*pool_size
-//#define In_CH_MAX 4
-//#define IFMDim_MAX 32
-//#define pool_mode 1 // 0 for max pooling, 1 for average pooling
-//#define output_rectify 0
-///////////////////////////////////////
-
 
 
 
@@ -71,51 +60,44 @@ void pool (
 	hls::stream<AXI_VAL> & in, 
 	hls::stream<AXI_VAL> & out,
 	const unsigned layer_id,
-//	const unsigned pool_size,
-//	const unsigned In_CH_MAX,
-//	const unsigned IFMDim_MAX,
 	const unsigned pool_mode, // 0 for max pooling, 1 for average pooling
-	const bool output_rectify = 1
+	const bool output_rectify
 ) {
-
-#pragma HLS INTERFACE axis port=in
-#pragma HLS INTERFACE axis port=out
-#pragma HLS INTERFACE ap_ctrl_none port=return
 
 	const unsigned pool_square = pool_size * pool_size;
 	AXI_VAL valIn, valOut;
 
 	// first two data as row_size and col_size
 	valIn = in.read();
-	unsigned status = (unsigned)valIn.data;
+	unsigned status = (unsigned)valIn;
 	out.write(valIn);
 
 	valIn = in.read();
-	unsigned batch_size = (unsigned)valIn.data;
+	unsigned batch_size = (unsigned)valIn;
 	out.write(valIn);
 
 	valIn = in.read();
-	unsigned ConvKernelDim = (unsigned)valIn.data;
+	unsigned ConvKernelDim = (unsigned)valIn;
 	out.write(valIn);
 
 	valIn = in.read();
-	unsigned IFMChannels = (unsigned)valIn.data;
+	unsigned IFMChannels = (unsigned)valIn;
 	out.write(valIn);
 
 	valIn = in.read();
-	unsigned IFMDim = (unsigned)valIn.data;
+	unsigned IFMDim = (unsigned)valIn;
 	out.write(valIn);
 
 	valIn = in.read();
-	unsigned OFMChannels = (unsigned)valIn.data;
+	unsigned OFMChannels = (unsigned)valIn;
 	out.write(valIn);
 
 	valIn = in.read();
-	unsigned OFMDim = (unsigned)valIn.data;
+	unsigned OFMDim = (unsigned)valIn;
 	out.write(valIn);
 
 	valIn = in.read();
-	unsigned PadDim = (unsigned)valIn.data;
+	unsigned PadDim = (unsigned)valIn;
 	out.write(valIn);
 
 	// Registers to store parameters for the current layer
@@ -163,14 +145,12 @@ void pool (
 						for (unsigned int kx = 0; kx < pool_size; kx++) {
 							for (unsigned int ch = 0; ch < IFMCH_curr; ch++){
 #pragma HLS PIPELINE II=1
-								//acc = acc | in.read();
 								valIn = in.read();
-								if (pool_mode == 0) acc[ch] = MAX(acc[ch],(int)valIn.data);
-								else if (pool_mode == 1) acc[ch] = acc[ch] + valIn.data;
+								if (pool_mode == 0) acc[ch] = MAX(acc[ch],(int)valIn);
+								else if (pool_mode == 1) acc[ch] = acc[ch] + valIn;
 							}
 						}
 						// pool with old value in row buffer
-						//buf[xp] |= acc;
 						for (unsigned int ch = 0; ch < In_CH_MAX; ch++){
 #pragma HLS PIPELINE II=1
 							if (pool_mode == 0){
@@ -188,10 +168,8 @@ void pool (
 				for (unsigned int outpix = 0; outpix < pool_out_bound; outpix++) {
 					for (unsigned int outch = 0; outch < IFMCH_curr; outch++){
 #pragma HLS PIPELINE II=1
-						if (pool_mode == 0) valOut.data = ((output_rectify)?(MAX(buf[outch][outpix], 0)) : (buf[outch][outpix]));
-						else if (pool_mode == 1) valOut.data = ((output_rectify)?(MAX(buf[outch][outpix]/(pool_square), 0)) : (buf[outch][outpix]/(pool_square)));
-						if (num_img==batch_size-1 && yp==pool_out_bound-1 && outpix==pool_out_bound-1 && outch==IFMCH_curr-1) valOut.last = 1;
-						else valOut.last = 0;
+						if (pool_mode == 0) valOut = ((output_rectify)?(MAX(buf[outch][outpix], 0)) : (buf[outch][outpix]));
+						else if (pool_mode == 1) valOut = ((output_rectify)?(MAX(buf[outch][outpix]/(pool_square), 0)) : (buf[outch][outpix]/(pool_square)));
 						out.write(valOut);
 						// get buffer ready for next use
 						if (pool_mode == 0){
