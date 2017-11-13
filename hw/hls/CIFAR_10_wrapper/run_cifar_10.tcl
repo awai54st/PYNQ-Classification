@@ -5,13 +5,15 @@
 ############################################################
 open_project -reset CIFAR_10
 set_top cifar_10
-add_files ../hw_library/stream_convolution_slideWindow.h
-add_files ../hw_library/pool.h
-add_files ../hw_library/fully_connected.h
-add_files ../hw_library/fixed_point_stream_convolution.h
-add_files ../hw_library/config.h
-add_files CIFAR_10_wrapper.h
 add_files CIFAR_10_wrapper.cpp
+add_files CIFAR_10_wrapper.h
+add_files ../hw_library/axi_dma_master.h
+add_files ../hw_library/axi_dma_slave.h
+add_files ../hw_library/config.h
+add_files ../hw_library/fixed_point_stream_convolution.h
+add_files ../hw_library/fully_connected.h
+add_files ../hw_library/pool.h
+add_files ../hw_library/stream_convolution_slideWindow.h
 open_solution -reset "solution1"
 set_part {xc7z020clg484-1} -tool vivado
 create_clock -period 10 -name default
