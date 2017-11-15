@@ -1,0 +1,13 @@
+
+****** Vivado v2016.1 (64-bit)
+  **** SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+  **** IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+Sourcing tcl script 'C:/Xilinx/SDSoC/2016.1/Vivado/2016.1/scripts/init.tcl'
+16 Beta devices matching pattern found, 0 enabled.
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/SDSoC/2016.1/Vivado/2016.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 25 11:01:13 2016...

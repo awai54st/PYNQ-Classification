@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="stream_double" xd:componentRef="stream_double" xd:initiationInterval="1" xd:clockPeriod="10.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="in_data-&gt;data" xd:originalName="in_data" xd:direction="in" xd:interfaceRef="in_data" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="in_data-&gt;keep" xd:originalName="in_data" xd:direction="in" xd:interfaceRef="in_data" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="in_data-&gt;strb" xd:originalName="in_data" xd:direction="in" xd:interfaceRef="in_data" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="in_data-&gt;user" xd:originalName="in_data" xd:direction="in" xd:interfaceRef="in_data" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="in_data-&gt;last" xd:originalName="in_data" xd:direction="in" xd:interfaceRef="in_data" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="in_data-&gt;id" xd:originalName="in_data" xd:direction="in" xd:interfaceRef="in_data" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="in_data-&gt;dest" xd:originalName="in_data" xd:direction="in" xd:interfaceRef="in_data" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="out_data-&gt;data" xd:originalName="out_data" xd:direction="out" xd:interfaceRef="out_data" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="out_data-&gt;keep" xd:originalName="out_data" xd:direction="out" xd:interfaceRef="out_data" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="out_data-&gt;strb" xd:originalName="out_data" xd:direction="out" xd:interfaceRef="out_data" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="out_data-&gt;user" xd:originalName="out_data" xd:direction="out" xd:interfaceRef="out_data" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="out_data-&gt;last" xd:originalName="out_data" xd:direction="out" xd:interfaceRef="out_data" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="out_data-&gt;id" xd:originalName="out_data" xd:direction="out" xd:interfaceRef="out_data" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="out_data-&gt;dest" xd:originalName="out_data" xd:direction="out" xd:interfaceRef="out_data" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:latencyEstimates xd:best-case="0" xd:worst-case="0" xd:average-case="0"/>
+  <xd:resourceEstimates xd:LUT="3" xd:FF="2" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

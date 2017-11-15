@@ -1,0 +1,133 @@
+
+
+================================================================
+== Vivado HLS Report for 'stream_double'
+================================================================
+* Date:           Wed Nov 23 16:17:23 2016
+
+* Version:        2016.1 (Build 1538259 on Fri Apr 08 16:12:49 MDT 2016)
+* Project:        stream_double
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      0.00|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    1|    1|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      3|
+|Register         |        -|      -|       2|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       2|      3|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +--------------------------------+----+-----------+-----+-----------+
+    |              Name              | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------+----+-----------+-----+-----------+
+    |ap_sig_ioackin_out_data_TREADY  |   1|          2|    1|          2|
+    |in_data_TDATA_blk_n             |   1|          2|    1|          2|
+    |out_data_TDATA_blk_n            |   1|          2|    1|          2|
+    +--------------------------------+----+-----------+-----+-----------+
+    |Total                           |   3|          6|    3|          6|
+    +--------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------+---+----+-----+-----------+
+    |              Name              | FF| LUT| Bits| Const Bits|
+    +--------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                       |  1|   0|    1|          0|
+    |ap_reg_ioackin_out_data_TREADY  |  1|   0|    1|          0|
+    +--------------------------------+---+----+-----+-----------+
+    |Total                           |  2|   0|    2|          0|
+    +--------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-----+--------------+-----------------+--------------+
+|    RTL Ports    | Dir | Bits|   Protocol   |  Source Object  |    C Type    |
++-----------------+-----+-----+--------------+-----------------+--------------+
+|ap_clk           |  in |    1| ap_ctrl_none |  stream_double  | return value |
+|ap_rst_n         |  in |    1| ap_ctrl_none |  stream_double  | return value |
+|in_data_TDATA    |  in |   32|     axis     |  in_data_data_V |    pointer   |
+|in_data_TVALID   |  in |    1|     axis     |  in_data_data_V |    pointer   |
+|in_data_TREADY   | out |    1|     axis     |  in_data_dest_V |    pointer   |
+|in_data_TDEST    |  in |    1|     axis     |  in_data_dest_V |    pointer   |
+|in_data_TKEEP    |  in |    4|     axis     |  in_data_keep_V |    pointer   |
+|in_data_TSTRB    |  in |    4|     axis     |  in_data_strb_V |    pointer   |
+|in_data_TUSER    |  in |    1|     axis     |  in_data_user_V |    pointer   |
+|in_data_TLAST    |  in |    1|     axis     |  in_data_last_V |    pointer   |
+|in_data_TID      |  in |    1|     axis     |   in_data_id_V  |    pointer   |
+|out_data_TDATA   | out |   32|     axis     | out_data_data_V |    pointer   |
+|out_data_TVALID  | out |    1|     axis     | out_data_dest_V |    pointer   |
+|out_data_TREADY  |  in |    1|     axis     | out_data_dest_V |    pointer   |
+|out_data_TDEST   | out |    1|     axis     | out_data_dest_V |    pointer   |
+|out_data_TKEEP   | out |    4|     axis     | out_data_keep_V |    pointer   |
+|out_data_TSTRB   | out |    4|     axis     | out_data_strb_V |    pointer   |
+|out_data_TUSER   | out |    1|     axis     | out_data_user_V |    pointer   |
+|out_data_TLAST   | out |    1|     axis     | out_data_last_V |    pointer   |
+|out_data_TID     | out |    1|     axis     |  out_data_id_V  |    pointer   |
++-----------------+-----+-----+--------------+-----------------+--------------+
+
