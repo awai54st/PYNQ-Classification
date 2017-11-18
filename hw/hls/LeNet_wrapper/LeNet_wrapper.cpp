@@ -1,5 +1,4 @@
 #include"LeNet_wrapper.h"
-#include "../hw_library/config.h"
 
 void lenet(
 	hls::stream<AXI_DMA_IO> &in_stream,

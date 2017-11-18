@@ -1,4 +1,3 @@
-#include "config.h"
 
 void AXI_DMA_SLAVE(
 	hls::stream<AXI_DMA_IO> &in_stream,

@@ -1,4 +1,3 @@
-#include "config.h"
 
 void AXI_DMA_MASTER(
 	hls::stream<AXI_VAL> &in_stream,

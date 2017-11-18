@@ -1,4 +1,3 @@
-#include "config.h"
 
 template<
 	unsigned A_COL_MAX,

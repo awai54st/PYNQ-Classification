@@ -2,7 +2,7 @@
 #include <hls_stream.h>
 #include <ap_axi_sdata.h>
 
-#include "../hw_library/config.h"
+#include "config.h"
 
 #include "../hw_library/axi_dma_slave.h"
 #include "../hw_library/axi_dma_master.h"

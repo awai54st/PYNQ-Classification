@@ -9,7 +9,7 @@ add_files CIFAR_10_wrapper.cpp
 add_files CIFAR_10_wrapper.h
 add_files ../hw_library/axi_dma_master.h
 add_files ../hw_library/axi_dma_slave.h
-add_files ../hw_library/config.h
+add_files config.h
 add_files ../hw_library/fixed_point_stream_convolution.h
 add_files ../hw_library/fully_connected.h
 add_files ../hw_library/pool.h

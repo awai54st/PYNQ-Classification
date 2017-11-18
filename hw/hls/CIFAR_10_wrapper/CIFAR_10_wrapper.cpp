@@ -1,5 +1,4 @@
 #include"CIFAR_10_wrapper.h"
-#include "../hw_library/config.h"
 
 void cifar_10(
 	hls::stream<AXI_DMA_IO> &in_stream,

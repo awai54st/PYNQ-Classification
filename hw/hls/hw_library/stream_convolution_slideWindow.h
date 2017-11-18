@@ -43,7 +43,6 @@
  *****************************************************************************/
 
 #define inElem_MAX 10500
-#include "config.h"
 
 
 // II=1 sliding window generator, with common iteration space
