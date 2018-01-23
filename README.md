@@ -17,6 +17,7 @@ For a quick overview on the project please watch [my video tutorial](https://you
 We have prepared a SD card image with pre-installed Caffe and Theano dependencies. A SD card with at least 16GB is needed. The static IP for the PYNQ Jupyter Notebook is 192.168.2.99
 
 [Download Link (on Baidu Drive)](https://pan.baidu.com/s/1c2EmMvY)
+
 [Download Link (on Google Drive)](https://drive.google.com/open?id=1A9MrN_zzbHYiIHJvnNQYFc3sXqWZBb6o)
 
 If you wish to setup Caffe and Theano dependencies on your own, please see [MANUAL_INSTAL.md](MANUAL_INSTALL.md) for instructions. (NOT RECOMMENDED since multiple issues have been reported)
