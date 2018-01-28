@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_ROW' is power-on initialization." projectName="SMM_CIF_0_3" solutionName="solution1" date="2017-06-08T19:57:19.251+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_COL' is power-on initialization." projectName="SMM_CIF_0_3" solutionName="solution1" date="2017-06-08T19:57:19.085+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'OFMDim_current' is power-on initialization." projectName="SMM_CIF_0_3" solutionName="solution1" date="2017-06-08T19:57:19.080+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'B_ROW' is power-on initialization." projectName="SMM_CIF_0_3" solutionName="solution1" date="2017-06-08T19:57:19.072+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'B_COL' is power-on initialization." projectName="SMM_CIF_0_3" solutionName="solution1" date="2017-06-08T19:57:19.066+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path consists of the following:&#xD;&#xA;&#x9;'mul' operation ('r_V_1', SMM_CIF_0_3/fixed_point_stream_convolution.cpp:163) (3.36 ns)&#xD;&#xA;&#x9;'add' operation ('tmp7', SMM_CIF_0_3/fixed_point_stream_convolution.cpp:163) (3.02 ns)&#xD;&#xA;&#x9;'add' operation ('tmp6', SMM_CIF_0_3/fixed_point_stream_convolution.cpp:163) (3.02 ns)" projectName="SMM_CIF_0_3" solutionName="solution1" date="2017-06-08T19:57:18.249+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.4ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="SMM_CIF_0_3" solutionName="solution1" date="2017-06-08T19:57:18.243+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] the outer loop is not a perfect loop." projectName="SMM_CIF_0_3" solutionName="solution1" date="2017-06-08T19:57:17.814+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2' (SMM_CIF_0_3/fixed_point_stream_convolution.cpp:128:22) in function 'SMM_CIF_0_3' : " projectName="SMM_CIF_0_3" solutionName="solution1" date="2017-06-08T19:57:17.294+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] more than one sub loop." projectName="SMM_CIF_0_3" solutionName="solution1" date="2017-06-08T19:57:17.289+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2.1' (SMM_CIF_0_3/fixed_point_stream_convolution.cpp:136:19) in function 'SMM_CIF_0_3' : " projectName="SMM_CIF_0_3" solutionName="solution1" date="2017-06-08T19:57:17.284+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

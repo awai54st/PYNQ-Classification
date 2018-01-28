@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [BIND 205-102] The specified resource core for memory 'inElem_V' will be ignored if a simpler one can be used." projectName="SCIG_CIF_0_1" solutionName="solution1" date="2017-06-08T17:39:27.453+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'store' operation (SCIG_CIF_0_1/stream_convolution_slideWindow.cpp:177) of variable 'inElem_V_load_1', SCIG_CIF_0_1/stream_convolution_slideWindow.cpp:177 on array 'inputBuf.V', SCIG_CIF_0_1/stream_convolution_slideWindow.cpp:136 due to limited memory ports." projectName="SCIG_CIF_0_1" solutionName="solution1" date="2017-06-08T17:39:27.290+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 2, distance = 1)&#xD;&#xA;   between axis read on port 'in_V_data_V' (SCIG_CIF_0_1/stream_convolution_slideWindow.cpp:170) and axis read on port 'in_V_data_V' (SCIG_CIF_0_1/stream_convolution_slideWindow.cpp:170)." projectName="SCIG_CIF_0_1" solutionName="solution1" date="2017-06-08T17:39:27.286+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 1, distance = 1)&#xD;&#xA;   between 'load' operation ('inElem_V_load', SCIG_CIF_0_1/stream_convolution_slideWindow.cpp:177) on array 'inElem.V', SCIG_CIF_0_1/stream_convolution_slideWindow.cpp:157 and 'store' operation (SCIG_CIF_0_1/stream_convolution_slideWindow.cpp:171) of variable 'tmp_25', SCIG_CIF_0_1/stream_convolution_slideWindow.cpp:171 on array 'inElem.V', SCIG_CIF_0_1/stream_convolution_slideWindow.cpp:157." projectName="SCIG_CIF_0_1" solutionName="solution1" date="2017-06-08T17:39:27.264+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'Mul_LUT' (SCIG_CIF_0_1/stream_convolution_slideWindow.cpp:134): '' does not exist or is optimized away." projectName="SCIG_CIF_0_1" solutionName="solution1" date="2017-06-08T17:39:27.215+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

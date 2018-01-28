@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_15_0_3' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.329+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_15_0_2' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.323+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_15_0_1' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.309+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_15_0_0' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.303+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_14_0_3' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.297+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_14_0_2' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.289+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_14_0_1' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.282+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_14_0_0' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.275+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_13_0_3' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.260+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_13_0_2' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.253+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_13_0_1' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.245+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_13_0_0' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.239+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_12_0_3' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.233+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_12_0_2' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.227+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_12_0_1' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.210+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_12_0_0' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.203+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_11_0_3' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.182+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_11_0_2' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.171+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_11_0_1' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.166+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_11_0_0' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.160+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_10_0_3' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.154+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_10_0_2' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.146+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_10_0_1' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.141+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_10_0_0' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.135+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_9_0_3' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.130+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_9_0_2' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.122+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_9_0_1' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.115+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_9_0_0' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.108+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_8_0_3' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.102+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_8_0_2' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.097+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_8_0_1' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.090+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_8_0_0' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.083+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_7_0_3' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.077+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_7_0_2' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.070+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_7_0_1' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.064+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_7_0_0' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.059+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_6_0_3' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.053+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_6_0_2' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.046+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_6_0_1' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.040+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_6_0_0' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.033+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_5_0_3' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.019+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_5_0_2' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.012+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_5_0_1' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.007+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_5_0_0' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:42.001+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_4_0_3' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.996+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_4_0_2' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.989+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_4_0_1' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.982+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_4_0_0' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.975+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_3_0_3' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.970+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_3_0_2' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.965+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_3_0_1' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.959+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_3_0_0' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.947+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_2_0_3' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.879+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_2_0_2' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.866+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_2_0_1' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.861+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_2_0_0' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.856+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_1_0_3' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.851+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_1_0_2' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.845+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_1_0_1' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.832+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_1_0_0' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.823+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_0_0_3' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.812+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_0_0_2' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.784+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_0_0_1' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.779+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_V_0_0_0' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.774+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_ROW' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.767+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'A_COL' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.761+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'OFMDim_current' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.756+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'B_ROW' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.750+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'B_COL' is power-on initialization." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:41.744+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path consists of the following:&#xD;&#xA;&#x9;'mul' operation ('r_V', fc_CIF_0_2/fully_connected_2.cpp:163) (3.36 ns)&#xD;&#xA;&#x9;'add' operation ('tmp6', fc_CIF_0_2/fully_connected_2.cpp:163) (3.02 ns)&#xD;&#xA;&#x9;'add' operation ('tmp5', fc_CIF_0_2/fully_connected_2.cpp:163) (2.44 ns)&#xD;&#xA;&#x9;'add' operation ('tmp4', fc_CIF_0_2/fully_connected_2.cpp:163) (1.97 ns)" projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:40.936+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (10.8ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:40.928+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] the outer loop is not a perfect loop." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:40.472+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2' (fc_CIF_0_2/fully_connected_2.cpp:128:22) in function 'FC_CIF_0_2' : " projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:39.733+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] more than one sub loop." projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:39.723+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2.1' (fc_CIF_0_2/fully_connected_2.cpp:136:19) in function 'FC_CIF_0_2' : " projectName="fc_CIF_0_2" solutionName="solution1" date="2017-06-08T19:59:39.717+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

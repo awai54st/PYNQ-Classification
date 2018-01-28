@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [BIND 205-102] The specified resource core for memory 'inElem_V' will be ignored if a simpler one can be used." projectName="SCIG_CIF_0_2" solutionName="solution1" date="2017-06-08T17:37:27.064+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 31, distance = 1)&#xD;&#xA;   between axis read on port 'in_V_data_V' (SCIG_CIF_0_2/stream_convolution_slideWindow.cpp:171) and axis read on port 'in_V_data_V' (SCIG_CIF_0_2/stream_convolution_slideWindow.cpp:171)." projectName="SCIG_CIF_0_2" solutionName="solution1" date="2017-06-08T17:37:26.499+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 27, distance = 1)&#xD;&#xA;   between axis read on port 'in_V_data_V' (SCIG_CIF_0_2/stream_convolution_slideWindow.cpp:171) and axis read on port 'in_V_data_V' (SCIG_CIF_0_2/stream_convolution_slideWindow.cpp:171)." projectName="SCIG_CIF_0_2" solutionName="solution1" date="2017-06-08T17:37:26.252+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 19, distance = 1)&#xD;&#xA;   between axis read on port 'in_V_data_V' (SCIG_CIF_0_2/stream_convolution_slideWindow.cpp:171) and axis read on port 'in_V_data_V' (SCIG_CIF_0_2/stream_convolution_slideWindow.cpp:171)." projectName="SCIG_CIF_0_2" solutionName="solution1" date="2017-06-08T17:37:26.229+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 4, distance = 1)&#xD;&#xA;   between axis read on port 'in_V_data_V' (SCIG_CIF_0_2/stream_convolution_slideWindow.cpp:171) and axis read on port 'in_V_data_V' (SCIG_CIF_0_2/stream_convolution_slideWindow.cpp:171)." projectName="SCIG_CIF_0_2" solutionName="solution1" date="2017-06-08T17:37:26.207+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 3, distance = 1)&#xD;&#xA;   between axis read on port 'in_V_data_V' (SCIG_CIF_0_2/stream_convolution_slideWindow.cpp:171) and axis read on port 'in_V_data_V' (SCIG_CIF_0_2/stream_convolution_slideWindow.cpp:171)." projectName="SCIG_CIF_0_2" solutionName="solution1" date="2017-06-08T17:37:25.908+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 2, distance = 1)&#xD;&#xA;   between axis read on port 'in_V_data_V' (SCIG_CIF_0_2/stream_convolution_slideWindow.cpp:171) and axis read on port 'in_V_data_V' (SCIG_CIF_0_2/stream_convolution_slideWindow.cpp:171)." projectName="SCIG_CIF_0_2" solutionName="solution1" date="2017-06-08T17:37:25.881+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 1, distance = 1)&#xD;&#xA;   between 'load' operation ('inElem_V_load', SCIG_CIF_0_2/stream_convolution_slideWindow.cpp:178) on array 'inElem.V', SCIG_CIF_0_2/stream_convolution_slideWindow.cpp:158 and 'store' operation (SCIG_CIF_0_2/stream_convolution_slideWindow.cpp:172) of variable 'tmp_24', SCIG_CIF_0_2/stream_convolution_slideWindow.cpp:172 on array 'inElem.V', SCIG_CIF_0_2/stream_convolution_slideWindow.cpp:158." projectName="SCIG_CIF_0_2" solutionName="solution1" date="2017-06-08T17:37:25.854+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'Mul_LUT' (SCIG_CIF_0_2/stream_convolution_slideWindow.cpp:136): '' does not exist or is optimized away." projectName="SCIG_CIF_0_2" solutionName="solution1" date="2017-06-08T17:37:25.730+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

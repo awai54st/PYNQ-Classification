@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'IFMDim_curr' is power-on initialization." projectName="maxpool_CIF_0_1" solutionName="solution1" date="2017-06-08T17:40:22.650+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'IFMCH_curr' is power-on initialization." projectName="maxpool_CIF_0_1" solutionName="solution1" date="2017-06-08T17:40:22.545+0100" type="Warning"/>
+        <logs message="WARNING: [BIND 205-102] The specified resource core for memory 'acc' will be ignored if a simpler one can be used." projectName="maxpool_CIF_0_1" solutionName="solution1" date="2017-06-08T17:40:22.272+0100" type="Warning"/>
+        <logs message="WARNING: [BIND 205-102] The specified resource core for memory 'buf' will be ignored if a simpler one can be used." projectName="maxpool_CIF_0_1" solutionName="solution1" date="2017-06-08T17:40:22.266+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 1, distance = 1)&#xD;&#xA;   between 'store' operation (maxpool_CIF_0_1/maxPool_1.cpp:165) of variable 'acc_load_1_tmp_data_V_18_load', maxpool_CIF_0_1/maxPool_1.cpp:165 on array 'acc', maxpool_CIF_0_1/maxPool_1.cpp:137 and 'load' operation ('acc_load_1', maxpool_CIF_0_1/maxPool_1.cpp:165) on array 'acc', maxpool_CIF_0_1/maxPool_1.cpp:137." projectName="maxpool_CIF_0_1" solutionName="solution1" date="2017-06-08T17:40:22.055+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] more than one sub loop." projectName="maxpool_CIF_0_1" solutionName="solution1" date="2017-06-08T17:40:21.601+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2.1' (maxpool_CIF_0_1/maxPool_1.cpp:156:28) in function 'maxPool_CIF_0_1' : " projectName="maxpool_CIF_0_1" solutionName="solution1" date="2017-06-08T17:40:21.596+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] more than one sub loop." projectName="maxpool_CIF_0_1" solutionName="solution1" date="2017-06-08T17:40:21.591+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2.1.1.1' (maxpool_CIF_0_1/maxPool_1.cpp:158:30) in function 'maxPool_CIF_0_1' : " projectName="maxpool_CIF_0_1" solutionName="solution1" date="2017-06-08T17:40:21.586+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

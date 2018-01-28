@@ -1,0 +1,1018 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>user.org</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>sketchpad</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>axis_in</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>axis_in_tvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>axis_in_tready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>axis_in_tdata</spirit:name>
+            <spirit:vector>
+              <spirit:left spirit:format="long">31</spirit:left>
+              <spirit:right spirit:format="long">0</spirit:right>
+            </spirit:vector>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TLAST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>axis_in_tlast</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>TDATA_NUM_BYTES</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXIS_IN.TDATA_NUM_BYTES">1</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TDEST_WIDTH</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXIS_IN.TDEST_WIDTH">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TID_WIDTH</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXIS_IN.TID_WIDTH">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TUSER_WIDTH</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXIS_IN.TUSER_WIDTH">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TREADY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXIS_IN.HAS_TREADY">1</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TSTRB</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXIS_IN.HAS_TSTRB">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TKEEP</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXIS_IN.HAS_TKEEP">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TLAST</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXIS_IN.HAS_TLAST">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>LAYERED_METADATA</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXIS_IN.LAYERED_METADATA">undef</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>axis_out</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>axis_out_tvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>axis_out_tready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>axis_out_tdata</spirit:name>
+            <spirit:vector>
+              <spirit:left spirit:format="long">31</spirit:left>
+              <spirit:right spirit:format="long">0</spirit:right>
+            </spirit:vector>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TLAST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>axis_out_tlast</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>TDATA_NUM_BYTES</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXIS_OUT.TDATA_NUM_BYTES">4</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TDEST_WIDTH</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXIS_OUT.TDEST_WIDTH">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TID_WIDTH</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXIS_OUT.TID_WIDTH">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TUSER_WIDTH</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXIS_OUT.TUSER_WIDTH">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TREADY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXIS_OUT.HAS_TREADY">1</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TSTRB</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXIS_OUT.HAS_TSTRB">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TKEEP</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXIS_OUT.HAS_TKEEP">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_TLAST</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXIS_OUT.HAS_TLAST">1</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>LAYERED_METADATA</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXIS_OUT.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} TDATA_WIDTH 32}</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>CLK.CLK_IN</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>clk_in</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.CLK_IN.FREQ_HZ">100000000</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.CLK_IN.PHASE">0.000</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.CLK_IN.ASSOCIATED_BUSIF">axis_in:axis_out</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.CLK_IN.ASSOCIATED_RESET">rsn_in</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>RST.RSN_IN</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>rsn_in</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.RST.RSN_IN.POLARITY">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>sketchpad</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_FC_CIF_0_1_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_FC_CIF_0_2_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_SCIG_CIF_0_1_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_SCIG_CIF_0_2_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_SCIG_CIF_0_3_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_SMM_CIF_0_1_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_SMM_CIF_0_2_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_SMM_CIF_0_3_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_axis_register_slice_1_1__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_maxPool_CIF_0_1_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_maxPool_CIF_0_2_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_maxPool_CIF_0_3_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>sketchpad</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_FC_CIF_0_1_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_FC_CIF_0_2_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_SCIG_CIF_0_1_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_SCIG_CIF_0_2_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_SCIG_CIF_0_3_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_SMM_CIF_0_1_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_SMM_CIF_0_2_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_SMM_CIF_0_3_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_axis_register_slice_1_1__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_maxPool_CIF_0_1_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_maxPool_CIF_0_2_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_maxPool_CIF_0_3_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>axis_in_tdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>axis_in_tlast</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">0</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>axis_in_tready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>axis_in_tvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>axis_out_tdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>axis_out_tlast</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">0</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>axis_out_tready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>axis_out_tvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>clk_in</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>rsn_in</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+  </spirit:model>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_FC_CIF_0_1_0_0/sketchpad_FC_CIF_0_1_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_FC_CIF_0_1_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_FC_CIF_0_2_0_0/sketchpad_FC_CIF_0_2_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_FC_CIF_0_2_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_SCIG_CIF_0_1_0_0/sketchpad_SCIG_CIF_0_1_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_SCIG_CIF_0_1_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_SCIG_CIF_0_2_0_0/sketchpad_SCIG_CIF_0_2_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_SCIG_CIF_0_2_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_SCIG_CIF_0_3_0_0/sketchpad_SCIG_CIF_0_3_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_SCIG_CIF_0_3_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_SMM_CIF_0_1_0_0/sketchpad_SMM_CIF_0_1_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_SMM_CIF_0_1_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_SMM_CIF_0_2_0_0/sketchpad_SMM_CIF_0_2_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_SMM_CIF_0_2_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_SMM_CIF_0_3_0_0/sketchpad_SMM_CIF_0_3_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_SMM_CIF_0_3_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_axis_register_slice_0_0/sketchpad_axis_register_slice_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_register_slice_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_axis_register_slice_1_0/sketchpad_axis_register_slice_1_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_register_slice_1</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_axis_register_slice_2_0/sketchpad_axis_register_slice_2_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_register_slice_2</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_axis_register_slice_3_0/sketchpad_axis_register_slice_3_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_register_slice_3</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_axis_register_slice_4_0/sketchpad_axis_register_slice_4_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_register_slice_4</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_axis_register_slice_5_0/sketchpad_axis_register_slice_5_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_register_slice_5</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_axis_register_slice_6_0/sketchpad_axis_register_slice_6_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_register_slice_6</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_axis_register_slice_7_0/sketchpad_axis_register_slice_7_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_register_slice_7</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_axis_register_slice_8_0/sketchpad_axis_register_slice_8_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_register_slice_8</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_axis_register_slice_9_0/sketchpad_axis_register_slice_9_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_register_slice_9</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_maxPool_CIF_0_1_0_0/sketchpad_maxPool_CIF_0_1_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_maxPool_CIF_0_1_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_maxPool_CIF_0_2_0_0/sketchpad_maxPool_CIF_0_2_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_maxPool_CIF_0_2_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_maxPool_CIF_0_3_0_0/sketchpad_maxPool_CIF_0_3_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_maxPool_CIF_0_3_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/sketchpad_ooc.xdc</spirit:name>
+        <spirit:userFileType>xdc</spirit:userFileType>
+        <spirit:userFileType>SCOPED_TO_REF_sketchpad</spirit:userFileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/hdl/sketchpad.hwdef</spirit:name>
+        <spirit:userFileType>hwdef</spirit:userFileType>
+        <spirit:userFileType>USED_IN_hw_handoff</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/hdl/sketchpad.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_FC_CIF_0_1_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xsi:type="xilinx:componentRefType" xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="FC_CIF_0_1" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_FC_CIF_0_2_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="FC_CIF_0_2" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_SCIG_CIF_0_1_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="SCIG_CIF_0_1" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_SCIG_CIF_0_2_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="SCIG_CIF_0_2" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_SCIG_CIF_0_3_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="SCIG_CIF_0_3" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_SMM_CIF_0_1_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="SMM_CIF_0_1" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_SMM_CIF_0_2_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="SMM_CIF_0_2" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_SMM_CIF_0_3_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="SMM_CIF_0_3" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_ip_axis_register_slice_1_1__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axis_register_slice" xilinx:version="1.1">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_maxPool_CIF_0_1_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="maxPool_CIF_0_1" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_maxPool_CIF_0_2_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="maxPool_CIF_0_2" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_hls_maxPool_CIF_0_3_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="maxPool_CIF_0_3" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_FC_CIF_0_1_0_0/sketchpad_FC_CIF_0_1_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_FC_CIF_0_1_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_FC_CIF_0_2_0_0/sketchpad_FC_CIF_0_2_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_FC_CIF_0_2_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_SCIG_CIF_0_1_0_0/sketchpad_SCIG_CIF_0_1_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_SCIG_CIF_0_1_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_SCIG_CIF_0_2_0_0/sketchpad_SCIG_CIF_0_2_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_SCIG_CIF_0_2_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_SCIG_CIF_0_3_0_0/sketchpad_SCIG_CIF_0_3_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_SCIG_CIF_0_3_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_SMM_CIF_0_1_0_0/sketchpad_SMM_CIF_0_1_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_SMM_CIF_0_1_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_SMM_CIF_0_2_0_0/sketchpad_SMM_CIF_0_2_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_SMM_CIF_0_2_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_SMM_CIF_0_3_0_0/sketchpad_SMM_CIF_0_3_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_SMM_CIF_0_3_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_axis_register_slice_0_0/sketchpad_axis_register_slice_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_register_slice_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_axis_register_slice_1_0/sketchpad_axis_register_slice_1_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_register_slice_1</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_axis_register_slice_2_0/sketchpad_axis_register_slice_2_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_register_slice_2</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_axis_register_slice_3_0/sketchpad_axis_register_slice_3_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_register_slice_3</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_axis_register_slice_4_0/sketchpad_axis_register_slice_4_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_register_slice_4</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_axis_register_slice_5_0/sketchpad_axis_register_slice_5_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_register_slice_5</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_axis_register_slice_6_0/sketchpad_axis_register_slice_6_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_register_slice_6</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_axis_register_slice_7_0/sketchpad_axis_register_slice_7_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_register_slice_7</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_axis_register_slice_8_0/sketchpad_axis_register_slice_8_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_register_slice_8</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_axis_register_slice_9_0/sketchpad_axis_register_slice_9_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_axis_register_slice_9</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_maxPool_CIF_0_1_0_0/sketchpad_maxPool_CIF_0_1_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_maxPool_CIF_0_1_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_maxPool_CIF_0_2_0_0/sketchpad_maxPool_CIF_0_2_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_maxPool_CIF_0_2_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/ip/sketchpad_maxPool_CIF_0_3_0_0/sketchpad_maxPool_CIF_0_3_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_maxPool_CIF_0_3_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/hdl/sketchpad.hwdef</spirit:name>
+        <spirit:userFileType>hwdef</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>/home/awai54st/Documents/PYNQ-Classification/hw/graphic_design_flow/CIFAR-10/build/SKETCHPAD/base_project/sketchpad/hdl/sketchpad.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_FC_CIF_0_1_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="FC_CIF_0_1" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_FC_CIF_0_2_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="FC_CIF_0_2" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_SCIG_CIF_0_1_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="SCIG_CIF_0_1" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_SCIG_CIF_0_2_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="SCIG_CIF_0_2" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_SCIG_CIF_0_3_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="SCIG_CIF_0_3" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_SMM_CIF_0_1_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="SMM_CIF_0_1" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_SMM_CIF_0_2_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="SMM_CIF_0_2" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_SMM_CIF_0_3_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="SMM_CIF_0_3" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_axis_register_slice_1_1__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axis_register_slice" xilinx:version="1.1">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_maxPool_CIF_0_1_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="maxPool_CIF_0_1" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_maxPool_CIF_0_2_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="maxPool_CIF_0_2" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_maxPool_CIF_0_3_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="hls" xilinx:name="maxPool_CIF_0_3" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/sketchpad_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_f92e9879</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>sketchpad_v1_0</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">sketchpad_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>sketchpad_v1_0</xilinx:displayName>
+      <xilinx:definitionSource>IPI</xilinx:definitionSource>
+      <xilinx:coreRevision>1</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2018-01-28T21:27:26Z</xilinx:coreCreationDateTime>
+      <xilinx:configElementInfos>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXIS_IN.HAS_TKEEP" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXIS_IN.HAS_TLAST" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXIS_IN.HAS_TREADY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXIS_IN.HAS_TSTRB" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXIS_IN.LAYERED_METADATA" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXIS_IN.TDATA_NUM_BYTES" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXIS_IN.TDEST_WIDTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXIS_IN.TID_WIDTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXIS_IN.TUSER_WIDTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXIS_OUT.HAS_TKEEP" xilinx:valueSource="constant_prop"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXIS_OUT.HAS_TLAST" xilinx:valueSource="constant_prop"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXIS_OUT.HAS_TREADY" xilinx:valueSource="constant_prop"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXIS_OUT.HAS_TSTRB" xilinx:valueSource="constant_prop"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXIS_OUT.LAYERED_METADATA" xilinx:valueSource="ip_propagated"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXIS_OUT.TDATA_NUM_BYTES" xilinx:valueSource="constant_prop"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXIS_OUT.TDEST_WIDTH" xilinx:valueSource="constant_prop"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXIS_OUT.TID_WIDTH" xilinx:valueSource="constant_prop"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXIS_OUT.TUSER_WIDTH" xilinx:valueSource="constant_prop"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.CLK_IN.FREQ_HZ" xilinx:valueSource="user"/>
+      </xilinx:configElementInfos>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2016.1</xilinx:xilinxVersion>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

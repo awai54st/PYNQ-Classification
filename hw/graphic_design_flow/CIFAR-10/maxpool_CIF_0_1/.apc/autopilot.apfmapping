@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="maxPool_1.cpp" path="D:\ew_ip_repo\maxpool_CIF_0_1\maxPool_1.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="main.cpp" path="D:\ew_ip_repo\maxpool_CIF_0_1\main.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

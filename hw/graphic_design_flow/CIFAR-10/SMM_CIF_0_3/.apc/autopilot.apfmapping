@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fixed_point_stream_convolution.cpp" path="D:\ew_ip_repo\SMM_CIF_0_3\fixed_point_stream_convolution.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="main.cpp" path="D:\ew_ip_repo\SMM_CIF_0_3\main.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
