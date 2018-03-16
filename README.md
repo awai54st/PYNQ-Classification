@@ -24,7 +24,7 @@ If you wish to setup Caffe and Theano dependencies on your own, please see [MANU
 
 ### 2. Vivado Project Setup - How to implement more CNN models?
 
-The VIVADO_SIDE.7z package contains the Vivado project needed to generate bitstreams for customised CNN models. It contains the "layer IP library", "base project" and "block design project" as mentioned in the tutorial video. 
+Please go to hw/README.md for guide on regenerating the Vivado and Vivado HLS projects.
 
 ### References
     
