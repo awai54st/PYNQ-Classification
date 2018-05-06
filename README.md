@@ -4,6 +4,16 @@ PYNQ Classification - Python on Zynq FPGA for Convolutional Neural Networks (Alp
 ## BRIEF DESCRIPTION:
 This repository presents a fast prototyping framework, which is an Open Source framework designed to enable fast deployment of embedded Convolutional Neural Network (CNN) applications on PYNQ platforms.
 
+## CITATION:
+If you make use of this code, please acknowledge us by citing [our article](https://spiral.imperial.ac.uk/handle/10044/1/57937):
+
+	@inproceedings{Wang_FCCM18,
+        author={E. Wang and J. J. Davis and P. Y. K. Cheung},
+        booktitle={IEEE Symposium on Field-programmable Custom Computing Machines (FCCM)},
+        title={{A PYNQ-based Framework for Rapid CNN Prototyping}},
+        year={2018}
+    }
+
 ## INSTRUCTIONS TO BUILD AND TEST THE PROJECT:
 
 ### Repository Organisation
